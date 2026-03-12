@@ -16,10 +16,14 @@
   },
   "files": [
     "dist",
-    "vendor"
+    "src",
+    "vendor",
+    "tsup.config.ts",
+    "tsconfig.json"
   ],
   "scripts": {
     "build": "tsup",
+    "prepare": "tsup",
     "dev": "tsup --watch",
     "typecheck": "tsc --noEmit"
   },
@@ -28,14 +32,15 @@
     "react-dom": ">=18"
   },
   "dependencies": {
-    "blueimp-md5": "^2.19.0"
+    "blueimp-md5": "^2.19.0",
+    "tsup": "^8.0.0",
+    "typescript": "~5.9.3"
   },
   "devDependencies": {
+    "@types/blueimp-md5": "^2.18.2",
     "@types/react": "^19.2.7",
     "@types/react-dom": "^19.2.3",
     "react": "^19.2.0",
-    "react-dom": "^19.2.0",
-    "tsup": "^8.0.0",
-    "typescript": "~5.9.3"
+    "react-dom": "^19.2.0"
   }
 }
