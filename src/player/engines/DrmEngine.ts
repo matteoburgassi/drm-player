@@ -125,7 +125,7 @@ export class DrmEngine implements PlayerEngine {
   seek(seconds: number): void {
     if (this.player) {
       const duration = this.player.getDuration?.() || 0;
-      this.player.seekTo(Math.max(0, Math.min(duration, seconds)));
+      this.player.seek(Math.max(0, Math.min(duration, seconds)));
     }
   }
 
